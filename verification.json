@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "bound": 60000,
+  "certificate_rows": 60000,
+  "prime_count": 60000,
+  "last_prime": 746773,
+  "max_exit_steps": 10,
+  "vertices_removed_by_independent_kahn_check": 60000,
+  "certificate_sha256": "9871bc6f20f6b3fb2e4f4e5a90fc2ae484fe9537f74f87e1781f68f42c92baa0",
+  "scope": "complete finite obligation for universal proof in PROOF.md, not a stand-alone infinite theorem",
+  "external_mathematical_input": "Rosser theorem p_n>n log(n), and elementary e<3; bridges proved in PROOF.md"
+}

@@ -1,0 +1,6 @@
+build_certificate
+__pycache__/
+*.pyc
+independent_second_audit.json
+*.tmp
+.DS_Store

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "B": 60000,
+  "prime_last": 746773,
+  "vertices_topologically_eliminated": 60000,
+  "max_steps_to_escape": 10,
+  "num_1_step": 54598,
+  "num_10_step": 1,
+  "certificate_independent": true,
+  "same_certificate_read": false,
+  "scope": "Independent finite component only; infinite proof requires Rosser bound and digit-length argument"
+}

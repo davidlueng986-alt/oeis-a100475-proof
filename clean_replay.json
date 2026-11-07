@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "fresh_directory": true,
+  "certificate_bytes_match": true,
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "certificate_sha256": "9871bc6f20f6b3fb2e4f4e5a90fc2ae484fe9537f74f87e1781f68f42c92baa0",
+  "commands": [
+    {
+      "command": [
+        "g++",
+        "-O2",
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-pedantic",
+        "build_certificate.cpp",
+        "-o",
+        "build_certificate"
+      ],
+      "stdout": "",
+      "stderr": "",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "./build_certificate"
+      ],
+      "stdout": "{\"bound\":60000,\"prime_count\":60000,\"last_prime\":746773,\"max_exit_steps\":10,\"algorithm\":\"trial division; arithmetic digit reversal; explicit exit ranks\"}\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python3",
+        "verify_certificate.py"
+      ],
+      "stdout": "{\"passed\": true, \"bound\": 60000, \"certificate_rows\": 60000, \"prime_count\": 60000, \"last_prime\": 746773, \"max_exit_steps\": 10, \"vertices_removed_by_independent_kahn_check\": 60000, \"certificate_sha256\": \"9871bc6f20f6b3fb2e4f4e5a90fc2ae484fe9537f74f87e1781f68f42c92baa0\", \"scope\": \"complete finite obligation for universal proof in PROOF.md, not a stand-alone infinite theorem\", \"external_mathematical_input\": \"Rosser theorem p_n>n log(n), and elementary e<3; bridges proved in PROOF.md\"}\n",
+      "stderr": "",
+      "returncode": 0
+    }
+  ]
+}
