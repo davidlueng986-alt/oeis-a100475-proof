@@ -1,0 +1,10 @@
+name = "A100475"
+defaultTargets = ["A100475"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "59c7f902e2bff1ceeb8466715bcb052b69b6a70f"
+
+[[lean_lib]]
+name = "A100475"

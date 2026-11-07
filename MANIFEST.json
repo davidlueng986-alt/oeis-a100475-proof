@@ -31,16 +31,16 @@
       "sha256": "8451dd2537176e3ea6eddfae276613782fffd5395b5289a4b23ca900603ac4f2"
     },
     "NOTICE.md": {
-      "bytes": 1520,
-      "sha256": "235e98bc92d01d374ecd94093f2639385565f576e2bdba00886ceaa48f18ea8f"
+      "bytes": 2089,
+      "sha256": "8310d53d7c930eb72d0b7cd0d7c191e6a7c55ee8b62fe3a58304a39016262341"
     },
     "PROOF.md": {
       "bytes": 6202,
       "sha256": "6cfc325910b3e044a1ead9d40d9473f0a6c0bf3bd89207c37102e916e5df4b6f"
     },
     "README.md": {
-      "bytes": 5564,
-      "sha256": "7d669991ae07214e04886dd16c17c9309c202346e2ea3961052dbc49e8d824f7"
+      "bytes": 6551,
+      "sha256": "703be1d9d4cb9d693e76cd6b494ee1d297d8570c261fdd5720cdd678c5fd4d0b"
     },
     "RESULT_zh.md": {
       "bytes": 1491,
@@ -69,6 +69,42 @@
     "independent_second_audit.json": {
       "bytes": 358,
       "sha256": "0440cde7f0011001f3b4f7a8f1aa6698d4d1c833344247dbb173b9f3ac5a630f"
+    },
+    "lean/.gitignore": {
+      "bytes": 7,
+      "sha256": "fde850d24186b6e99c8c0debd641fb3ab85198b109eb66f71a1fea02bd6ea1b3"
+    },
+    "lean/A100475.lean": {
+      "bytes": 21,
+      "sha256": "9ca9566b4d85e6ad880734e4c8a4acb9d2817945439cbcbf9c22f1d3a9f67389"
+    },
+    "lean/A100475/Basic.lean": {
+      "bytes": 15239,
+      "sha256": "6147f92d6e4de92822923080d2346497a1dfb3d1c711bc4dfe46b0fab54936ab"
+    },
+    "lean/Check.lean": {
+      "bytes": 190,
+      "sha256": "1a6ebf836da3af1ed29262def6e80bf9dad19adeed5d7965fe326db779954a63"
+    },
+    "lean/README.md": {
+      "bytes": 3434,
+      "sha256": "401a1204430c49c055a24346bc16cd70fbab4fda2afc3117623f19ac5207dd0f"
+    },
+    "lean/THIRD_PARTY_LICENSE-Apache-2.0.txt": {
+      "bytes": 11357,
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    "lean/lake-manifest.json": {
+      "bytes": 3158,
+      "sha256": "e6ea6c4f88a52c68c16a9dd8407ac29453befe68246f13f7daa4523a2464684e"
+    },
+    "lean/lakefile.toml": {
+      "bytes": 213,
+      "sha256": "989df6c9d054c4e42906210e30a09127218091ab56df62839c52dfc675fa169a"
+    },
+    "lean/lean-toolchain": {
+      "bytes": 29,
+      "sha256": "11c697aebe5b539d74f5069e497a588e7dfab1c4eeb74313f28357e351c55ca3"
     },
     "verification.json": {
       "bytes": 508,

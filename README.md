@@ -1,6 +1,6 @@
 # OEIS A100475: No positive orbit enters a loop
 
-**A complete negative solution to the positive-start loop question recorded in [OEIS A100475](https://oeis.org/A100475).** This repository contains a mathematical proof, a complete finite certificate, its original independent algorithmic checker, and a separately written second checker. The proof has passed internal independent mathematical/computational review. **It has not been peer-reviewed, accepted by OEIS, or formally checked end to end in Lean. Claims of worldwide priority are not made.**
+**A complete negative solution to the positive-start loop question recorded in [OEIS A100475](https://oeis.org/A100475).** This repository contains a mathematical proof, a complete finite certificate, its original independent algorithmic checker, and a separately written second checker. The proof has passed internal independent mathematical/computational review. **Update 2026-11-08: a Lean 4 + Mathlib formalization of the full negative answer is in [`lean/`](lean/). It contains no `sorry`, and its trust base is listed in [`lean/README.md`](lean/README.md). The result has not been peer-reviewed or accepted by OEIS. Claims of worldwide priority are not made.**
 
 ## The problem
 
@@ -50,6 +50,10 @@ The SHA-256 of the expected `certificate.tsv` is
 9871bc6f20f6b3fb2e4f4e5a90fc2ae484fe9537f74f87e1781f68f42c92baa0
 ```
 
+## Lean formalization
+
+[`lean/A100475/Basic.lean`](lean/A100475/Basic.lean) proves `¬ ∃ x, 0 < x ∧ x ≠ 1 ∧ IsUltimatelyPeriodic (aStartAt x)`. Its definitions are restated verbatim from the formal-conjectures file, so this is literally the negation of the upstream `conjecture`. The Lean proof replaces Rosser's theorem with Mathlib's Chebyshev bound θ(x) ≤ x log 4, and lowers the finite cutoff from 60,000 to 10^4. Five finite computations use `native_decide`, which means trusting the Lean compiler as well as the kernel. Details, axioms and build steps are in [`lean/README.md`](lean/README.md).
+
 ## Evidence and provenance
 
 - [`PROOF.md`](PROOF.md): full ordinary-mathematics proof, including the precise quantifier and boundary-case interpretation.
@@ -64,7 +68,7 @@ The underlying sequence is attributed to **Jonathan Vos Post** (OEIS A100475, 20
 
 ## Licensing
 
-Original textual material in this repository is released under **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**; original source code is released under the **MIT License** (see [`LICENSE`](LICENSE) and [`LICENSE-TEXT.md`](LICENSE-TEXT.md)). Third-party source material is *not relicensed*: OEIS content is CC BY-SA 4.0; the Formal Conjectures repository applies Apache-2.0 to software and additional source-dependent licenses to mathematical content. We link to those sources rather than copying their source files. See [`NOTICE.md`](NOTICE.md).
+Original textual material in this repository is released under **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**; original source code is released under the **MIT License** (see [`LICENSE`](LICENSE) and [`LICENSE-TEXT.md`](LICENSE-TEXT.md)). Third-party source material is *not relicensed*: OEIS content is CC BY-SA 4.0; the Formal Conjectures repository applies Apache-2.0 to software and additional source-dependent licenses to mathematical content. We link to those sources rather than copying their source files, except that `lean/A100475/Basic.lean` restates three short definitions from the Formal Conjectures A100475 file under Apache-2.0, with attribution (licence copy in `lean/THIRD_PARTY_LICENSE-Apache-2.0.txt`). See [`NOTICE.md`](NOTICE.md).
 
 ## Current public status (checked 2026-11-08)
 
