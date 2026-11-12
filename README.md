@@ -1,6 +1,6 @@
 # OEIS A100475: No positive orbit enters a loop
 
-**A complete negative solution to the positive-start loop question recorded in [OEIS A100475](https://oeis.org/A100475).** This repository contains a mathematical proof, a complete finite certificate, its original independent algorithmic checker, and a separately written second checker. The proof has passed internal independent mathematical/computational review. **Update 2026-11-08: a Lean 4 + Mathlib formalization of the full negative answer is in [`lean/`](lean/). It contains no `sorry`, and its trust base is listed in [`lean/README.md`](lean/README.md). The result has not been peer-reviewed or accepted by OEIS. Claims of worldwide priority are not made.**
+**A complete negative solution to the positive-start loop question recorded in [OEIS A100475](https://oeis.org/A100475).** This repository contains a mathematical proof, a complete finite certificate, its original algorithmic checker, and a separately written second checker. **Update 2026-11-08: a Lean 4 + Mathlib formalization of the full negative answer is in [`lean/`](lean/). It contains no `sorry`, and its trust base is listed in [`lean/README.md`](lean/README.md). Both the Lean 4 formalization and the code-based verification were verified using AI. The result has not been peer-reviewed or accepted by OEIS. Claims of worldwide priority are not made.**
 
 ## The problem
 
@@ -31,9 +31,9 @@ See [`PROOF.md`](PROOF.md) for the full argument and exact relation to the origi
 Requires Python 3 and `g++` (only `python3` for the supplied certificate). No GPU, paid API or AI model required.
 
 ```bash
-python3 verify_certificate.py      # verifies supplied certificate.tsv, including all 60,000 states
-python3 independent_check.py       # independently enumerates the entire finite state graph
-python3 clean_replay.py            # rebuilds certificate in a fresh temporary directory
+python3 verify_certificate.py    # verifies supplied certificate.tsv, including all 60,000 states
+python3 independent_check.py     # independently enumerates the entire finite state graph
+python3 clean_replay.py          # rebuilds certificate in a fresh temporary directory
 ```
 
 To regenerate the finite certificate manually:
@@ -60,11 +60,11 @@ The SHA-256 of the expected `certificate.tsv` is
 - [`certificate.tsv`](certificate.tsv): all 60,000 exact cases with exit ranks.
 - [`verify_certificate.py`](verify_certificate.py): exact certificate checker using a separate prime-generation and reversal algorithm.
 - [`independent_check.py`](independent_check.py): separately written finite-case checker, not dependent on the supplied certificate.
-- [`INDEPENDENT_AUDIT_2026-11-08.md`](INDEPENDENT_AUDIT_2026-11-08.md): 2026-11-08 independent audit and its scope.
+- [`INDEPENDENT_AUDIT_2026-11-08.md`](INDEPENDENT_AUDIT_2026-11-08.md): 2026-11-08 audit and its scope.
 - [`AUDIT.md`](AUDIT.md): previous research-source, novelty and completeness audit.
 - [`RESULT_zh.md`](RESULT_zh.md): Traditional Chinese explanation.
 
-The underlying sequence is attributed to **Jonathan Vos Post** (OEIS A100475, 2004). The prime bound is due to **Barkley Rosser** (1939). The finite proof/certificate and initial audit were prepared in an AI-assisted Codex research session, and the supplementary mathematical audit and second finite checker were performed in a later GPT-6 session (2026-11-08). AI review should not be represented as a human mathematician's endorsement.
+The underlying sequence is attributed to **Jonathan Vos Post** (OEIS A100475, 2004). The prime bound is due to **Barkley Rosser** (1939). Both the Lean 4 formalization and the code-based verification were verified using AI. AI verification should not be represented as a human mathematician's endorsement.
 
 ## Licensing
 
